@@ -1,18 +1,19 @@
 """
-Eric González, Izan Fernandez , Ayman dghoughi
+Eric González, Izan Fernandez , Ayman Dghoughi
 08/11/2023
 M03 UF1 A3
-Descripció: Exercici 3
-
+Descripció: Programa que calcula la velocitat instantània i la velocitat mitjana.
 """
 
-velinicial = float(input("Introdueix la velocitat inicial en m/s: "))
-acceleracio = float(input("Introdueix l'acceleració en m/s²: "))
-temps = float(input("Introdueix el temps: "))
-velinst = (velinicial + acceleracio) * temps
-print(velinst)
-if velinst <= 0:
+vinicial = float(input("Introdueix la velocitat inicial en m/s: "))
+acc = float(input("Introdueix l'acceleració en m/s²: "))
+temps = float(input("Introdueix el temps en s: "))
+
+vinst = (vinicial + acc) * temps
+print(vinst)
+
+if vinst <= 0:
     print("Esta parat i no puc calcular la mitjana")
 else:
-    velmitj = (velinicial + velinst)/2
-    print("La velocitat mitjana es", velmitj)
+    vmitj = (vinicial + vinst) / 2
+    print("La velocitat mitjana es", vmitj)
